@@ -1,0 +1,12 @@
+.container{
+background-color: azure;
+min-height: 50vh;
+border: 10px solid;
+}
+.content{
+    height: 50;
+    background-color: rgb(5, 117, 117);
+    
+
+
+}

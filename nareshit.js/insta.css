@@ -1,0 +1,28 @@
+.container{
+    height: auto;
+   
+}
+.card{
+    height: 50px;
+    width: 300px;
+    background-color: aliceblue;
+    text-align: center;
+    justify-content: space-evenly;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(58, 83, 184); 
+    line-height: 50px; 
+}
+.box{
+     margin-right: 20px;
+     text-decoration: none;
+     color: black;
+}
+.box i{
+    transition: all 0.5s;
+}
+.box i:hover{
+    transform: scale(1.5);
+}
+ 
+ 

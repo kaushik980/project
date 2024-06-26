@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="friend.css">
+</head>
+<body>
+    <div class="container">
+        <img id="img" src="https://i.pinimg.com/474x/c4/b8/34/c4b83478c0cd9e811625c85d26ea6224.jpg" alt="">
+        <h1>Angel Priya</h1>
+        <button onclick="addfriend()" id="btn-btn" class="btn">Add Friend</button>
+        <button class="btn">Cancel</button>
+        <div id="error"></div>
+    </div>
+    <script>
+        function addfriend() {
+            document.getElementById('error').textContent = 'Friend request sent!';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI calculator</title>
+    <link rel="stylesheet" href="emi.css">
+    <script>
+        function emicalculate(event) {
+            event.preventDefault();
+            var p = parseInt(document.getElementById("principal").value);
+            var r = parseFloat(document.getElementById("interest").value) / 12 / 100;
+            var n = parseInt(document.getElementById("time").value) * 12;
+            var emi = (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+            document.getElementById("result").innerHTML = 'Your monthly instalment is ' + emi.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <form class="container" onsubmit="emicalculate(event)">
+        <h1>EMI CALCULATOR</h1>
+        <div><h2>Loan Amount <input type="text" id="principal"></h2></div>
+        <div><h2>Interest Rate (%) <input type="text" id="interest"></h2></div>
+        <div><h2>Loan Tenure (years) <input type="text" id="time"></h2></div>
+        <button class="btn" type="submit">Submit</button>
+        <div id="result" class="result">
+            EMI
+        </div>
+    </form>
+</body>
+</html>

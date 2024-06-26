@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>CALCULATOR</h1>
+            <div>
+                <textarea name="textarea" id="textarea">0</textarea>
+            </div>
+            <div class="grid">
+                <div class="row">C</div>
+                <div class="row">%</div>
+                <div class="row"> &larr;</div>
+                <div class="row">/</div>
+                <div class="row">7</div>
+                <div class="row">8</div>
+                <div class="row">9</div>
+                <div class="row">X</div>
+                <div class="row">4</div>
+                <div class="row">5</div>
+                <div class="row">6</div>
+                <div class="row">-</div>
+                <div class="row">1</div>
+                <div class="row">2</div>
+                <div class="row">3</div>
+                <div class="row">+</div>
+                <div class="row">00</div>
+                <div class="row">0</div>
+                <div class="row">.</div>
+                <div class="row">=</div>
+               
+            </div>
+        </div>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll('.row');
+        const display = document.getElementById('textarea');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.innerText;
+
+                if (value === 'C') {
+                    display.value = '0';
+                } else if (value === '←') {
+                    display.value = display.value.slice(0, -1) || '0';
+                } else if (value === '=') {
+                    try {
+                        display.value = eval(display.value.replace('X', '*').replace('%', '/100'));
+                    } catch {
+                        display.value = 'Error';
+                    }
+                } else {
+                    if (display.value === '0') {
+                        display.value = value;
+                    } else {
+                        display.value += value;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

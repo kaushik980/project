@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Survey Form</title>
+      <link rel="stylesheet" href="styles.css">
+      <script src="script.js" defer></script>
+</head>
+<body>
+      <div class="container">
+            <div class="logo-section">
+                  <img class="logo" src="image/ducky-duck-logo.png" alt="ducky-duck-logo">
+                  <p>Ducky Duck</p>
+                  </div>
+            <div class="text-section">
+            <div class="introduction-text">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
+            <p>You know you want to.</p>
+            <p class="text-text">Let's do this!</p>
+            </div>
+            <form id="form" class="form" action="#" method="post">
+            <label for="first-name">First Name</label>
+                  <input type="text" pattern="^[A-Za-z]{1,15}$" id="first-name" required>
+            <label for="last-name">Last Name</label>
+                  <input type="text" pattern="^[A-Za-z]{1,15}$" id="last-name" required>
+            <label for="email">Email</label>
+                  <input type="email" id="email" required>
+            <label for="phone-number">Phone Number</label>
+                  <input type="tel" pattern="[0-9]{10,10}$" id="phone-number" required>
+            <label for="password">Password</label>
+                  <input class="pw"  type="password" oninput="checkPassword()" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" id="password" required>
+            <label for="password-confirm">Confirm Password</label>
+                  <input class="pw" type="password" oninput="checkPassword()" id="password-confirm" required>
+                  <button class="btn" type="submit">Create Account</button>
+      </form>
+      <p class="acc-text">Already have an account? <a href="#" target="_blank">Log in</a></p>
+      </div>
+      <footer class="image-source">Background Image by <a href="https://unsplash.com/fr/@guy_wire">Guy Bianco IV</a> on <a href="https://unsplash.com">Unsplash</a></footer>
+      </div>
+      
+</body>
+</html>
